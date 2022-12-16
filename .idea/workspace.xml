@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): notification implemented">
-      <change afterPath="$PROJECT_DIR$/src/infra/database/prisma/mapper/prisma-notification-mapper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/infra/http/view-models/notification-view-model.ts" afterDir="false" />
+    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): add mapper and view model">
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/cancel-notification.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/cancel-notification.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/errors/notification-not-found.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/factories/notification-factory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/entities/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/entities/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/entities/notification.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/entities/notification.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/sent-notification.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/sent-notification.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/database/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/database.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/repositories/notifications.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/repositories/notifications.repository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/infra/database/prisma/repositories/prisma-notifications-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/prisma/repositories/prisma-notifications-repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/http/http.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/http.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/repositories/in-memory-notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/repositories/in-memory-notifications.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,24 +43,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AtomSelectConfig&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/src/application/use-cases",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/node_modules/prettier",
+    "settings.editor.selected.configurable": "AtomSelectConfig",
+    "ts.external.directory.path": "/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/application/use-cases" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/infra/database/prisma" />
       <recent name="$PROJECT_DIR$/src/infra/database" />
@@ -67,7 +83,7 @@
       <workItem from="1670888299766" duration="5273000" />
       <workItem from="1671058385292" duration="18344000" />
       <workItem from="1671112302787" duration="4862000" />
-      <workItem from="1671138897128" duration="1518000" />
+      <workItem from="1671138897128" duration="6191000" />
     </task>
     <task id="LOCAL-00001" summary="feat(*): first commit">
       <created>1670888346097</created>
@@ -104,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671072137517</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(*): add mapper and view model">
+      <created>1671146214836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671146214836</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +149,7 @@
     <MESSAGE value="feat(*): add prisma integration and initial services and controllers" />
     <MESSAGE value="feat(*): prettier eslint" />
     <MESSAGE value="feat(*): notification implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(*): notification implemented" />
+    <MESSAGE value="feat(*): add mapper and view model" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(*): add mapper and view model" />
   </component>
 </project>
