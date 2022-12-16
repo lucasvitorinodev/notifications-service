@@ -1,7 +1,4 @@
 import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications';
-import { Content } from '@application/entities/content';
-import { Notification } from '@application/entities/notification';
-import { CountRecipientNotification } from '@application/use-cases/count-recipient-notifications';
 import { makeNotification } from '@test/factories/notification-factory';
 import { GetRecipientNotifications } from '@application/use-cases/get-recipient-notifications';
 

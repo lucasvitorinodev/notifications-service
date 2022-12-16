@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): get recipient notifications, count recipient notifications and cancel notification">
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/read-notification.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/read-notification.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/unread-notification.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/use-cases/unread-notification.ts" afterDir="false" />
+    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): read and unread notifications and implement prisma notifications repository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/entities/notification.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/entities/notification.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/sent-notification.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/send-notification.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/database/prisma/mapper/prisma-notification-mapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/prisma/mapper/prisma-notification-mapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/database/prisma/repositories/prisma-notifications-repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/prisma/repositories/prisma-notifications-repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/database/prisma/prisma.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/prisma/prisma.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/infra/http/http.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/http.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,7 @@
       <workItem from="1670888299766" duration="5273000" />
       <workItem from="1671058385292" duration="18344000" />
       <workItem from="1671112302787" duration="4862000" />
-      <workItem from="1671138897128" duration="7849000" />
+      <workItem from="1671138897128" duration="9978000" />
     </task>
     <task id="LOCAL-00001" summary="feat(*): first commit">
       <created>1670888346097</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671151224752</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat(*): read and unread notifications and implement prisma notifications repository">
+      <created>1671152866667</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671152866667</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +156,7 @@
     <MESSAGE value="feat(*): notification implemented" />
     <MESSAGE value="feat(*): add mapper and view model" />
     <MESSAGE value="feat(*): get recipient notifications, count recipient notifications and cancel notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(*): get recipient notifications, count recipient notifications and cancel notification" />
+    <MESSAGE value="feat(*): read and unread notifications and implement prisma notifications repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(*): read and unread notifications and implement prisma notifications repository" />
   </component>
 </project>
