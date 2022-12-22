@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): read and unread notifications and implement prisma notifications repository">
+    <list default="true" id="76006124-6d05-4d60-a5e9-43f2e45c3fc4" name="Changes" comment="feat(*): implement http methods">
+      <change afterPath="$PROJECT_DIR$/src/infra/messaging/kafka/controllers/notifications.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/messaging/kafka/kafka-consumer.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/infra/messaging/messaging.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/count-recipient-notifications.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/use-cases/get-recipient-notifications.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/database/prisma/prisma.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/database/prisma/prisma.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/controllers/notifications.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/infra/http/http.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/infra/http/http.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service/src/application/use-cases",
+    "last_opened_file_path": "/Users/lucasvitorino/Documents/Projects/Personal/Github/notifications-service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +74,8 @@
       <workItem from="1670888299766" duration="5273000" />
       <workItem from="1671058385292" duration="18344000" />
       <workItem from="1671112302787" duration="4862000" />
-      <workItem from="1671138897128" duration="9978000" />
+      <workItem from="1671138897128" duration="10027000" />
+      <workItem from="1671661749613" duration="6220000" />
     </task>
     <task id="LOCAL-00001" summary="feat(*): first commit">
       <created>1670888346097</created>
@@ -132,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671152866667</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat(*): implement http methods">
+      <created>1671155829054</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671155829054</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +165,7 @@
     <MESSAGE value="feat(*): add mapper and view model" />
     <MESSAGE value="feat(*): get recipient notifications, count recipient notifications and cancel notification" />
     <MESSAGE value="feat(*): read and unread notifications and implement prisma notifications repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(*): read and unread notifications and implement prisma notifications repository" />
+    <MESSAGE value="feat(*): implement http methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(*): implement http methods" />
   </component>
 </project>
